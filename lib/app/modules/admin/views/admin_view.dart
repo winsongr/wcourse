@@ -24,57 +24,65 @@ class AdminView extends GetView<AdminController> {
                 icon: const Icon(Icons.logout))
           ],
         ),
-        body: controller.isLoading.value
-            ? const CircularProgressIndicator(
-                color: Colors.red,
-              )
-            : Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: Get.height * 0.3,
-                      child: Center(
-                        child: controller.isImgLoading.value
-                            ? const CircularProgressIndicator(
-                                color: Colors.red,
-                              )
-                            : CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 80,
-                                backgroundImage: NetworkImage(
-                                  controller.userAvatarurl!,
-                                )),
+        body: SingleChildScrollView(
+          child: controller.isLoading.value
+              ? const CircularProgressIndicator(
+                  color: Colors.red,
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: Get.height * 0.3,
+                        child: Center(
+                          child: controller.isImgLoading.value
+                              ? const CircularProgressIndicator(
+                                  color: Colors.red,
+                                )
+                              : CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  radius: 80,
+                                  backgroundImage: NetworkImage(
+                                    controller.userAvatarurl!,
+                                  )),
+                        ),
                       ),
-                    ),
-                    listTile(tstyle,
-                        txt: "Name",
-                        trailTxt: controller.userName!.toUpperCase()),
-                    Divider(),
-                    listTile(
-                      tstyle,
-                      txt: "Email",
-                      trailTxt: controller.userEmail!,
-                    ),
-                    Divider(),
-                    listTile(
-                      tstyle,
-                      txt: "Role",
-                      trailTxt: controller.role!.capitalizeFirst,
-                    ),
-                    Divider(),
-                    listTile(
-                      tstyle,
-                      txt: "No of Users Registered in App",
-                      trailTxt: controller.userNo.toString(),
-                    ),
-                    Divider(),
-                    SizedBox(
-                      height: 15,
-                    )
-                  ],
+                      listTile(tstyle,
+                          txt: "Name",
+                          trailTxt: controller.userName!.toUpperCase()),
+                      Divider(),
+                      listTile(
+                        tstyle,
+                        txt: "Email",
+                        trailTxt: controller.userEmail!,
+                      ),
+                      Divider(),
+                      listTile(
+                        tstyle,
+                        txt: "Role",
+                        trailTxt: controller.role!.capitalizeFirst,
+                      ),
+                      Divider(),
+                      listTile(
+                        tstyle,
+                        txt: "No of Users Registered in App",
+                        trailTxt: controller.userNo.toString(),
+                      ),
+                      Divider(),
+                      listTile(
+                        tstyle,
+                        txt: "No of Courses Available in App",
+                        trailTxt: controller.noCourses.toString(),
+                      ),
+                      Divider(),
+                      SizedBox(
+                        height: 30,
+                      )
+                    ],
+                  ),
                 ),
-              ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             controller.openaddProject();

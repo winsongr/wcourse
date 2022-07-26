@@ -33,6 +33,7 @@ class AdminController extends GetxController {
   String? userUid;
   String? role;
   int? userNo;
+  int? noCourses;
   RxBool isLoading = false.obs;
   RxBool isImgLoading = true.obs;
 
@@ -49,6 +50,10 @@ class AdminController extends GetxController {
         .collection('users')
         .get()
         .then((snap) => userNo = snap.size);
+    FirebaseFirestore.instance
+        .collection('course')
+        .get()
+        .then((snap) => noCourses = snap.size);
   }
 
   Future getUserData() async {
