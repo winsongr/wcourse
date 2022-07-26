@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:wcourse/app/modules/admin/views/add_course.dart';
 
 import '../modules/admin/bindings/admin_binding.dart';
 import '../modules/admin/views/admin_view.dart';
@@ -49,6 +50,11 @@ class AppPages {
     GetPage(
       name: _Paths.ADMIN,
       page: () => const AdminView(),
+      binding: AdminBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADDCOURSE,
+      page: () => AddCourse(),
       binding: AdminBinding(),
     ),
   ];
