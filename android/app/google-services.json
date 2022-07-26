@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "708339984496",
+    "project_id": "wcourse-14e41",
+    "storage_bucket": "wcourse-14e41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708339984496:android:1aa3f6ae1720f8108d6cb5",
+        "android_client_info": {
+          "package_name": "com.winson.wcourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708339984496-14ef0lk51ob3eonb83a6o26sdqtg6nlo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.winson.wcourse",
+            "certificate_hash": "1a2d6c1760b09f110809cf40bf348aaf2679f790"
+          }
+        },
+        {
+          "client_id": "708339984496-unl69e8htn83e7pvf08fulg0a9hseeno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6aRptGYS8QNL_-qjk34PTpV8iGMJ7nxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708339984496-unl69e8htn83e7pvf08fulg0a9hseeno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
