@@ -1,23 +1,23 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wcourse/app/modules/dashboard/views/dashboard_view.dart';
+import 'package:wcourse/app/modules/home/views/home_view.dart';
+import 'package:wcourse/app/modules/signin/views/signin_view.dart';
 
 class SplashController extends GetxController {
-  //TODO: Implement SplashController
+  Future<Widget> usersignedIn() async {
+    User? user = FirebaseAuth.instance.currentUser;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+    if (user != null) {
+      return DashboardView();
+    } else {
+      return SigninView();
+    }
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
+      // DocumentSnapshot userData = await FirebaseFirestore.instance
+      //     .collection('users')
+      //     .doc(user.uid)
+      //     .get();
+      // UserModel userModel = UserModel.fromJson(userData);

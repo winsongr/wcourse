@@ -8,17 +8,30 @@ class SplashView extends GetView<SplashController> {
   const SplashView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('SplashView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'SplashView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return FutureBuilder(
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.hasData) {
+          return snapshot.data!;
+        }
+        return SafeArea(
+          child: Scaffold(
+            body: Center(
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: Get.width * 0.5,
+                  child: Image.asset(
+                    'assets/book.png',
+                  ),
+                ),
+                Text("WCourse"),
+              ],
+            )),
+          ),
+        );
+      },
+      future: controller.usersignedIn(),
     );
   }
 }
