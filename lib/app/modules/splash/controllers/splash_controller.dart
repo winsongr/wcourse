@@ -11,7 +11,7 @@ class SplashController extends GetxController {
     if (user != null) {
       return const DashboardView();
     } else {
-      return SigninView();
+      return const SigninView();
     }
   }
 }

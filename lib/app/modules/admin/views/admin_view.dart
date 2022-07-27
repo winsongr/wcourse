@@ -14,7 +14,11 @@ class AdminView extends GetView<AdminController> {
     return Obx(
       () => Scaffold(
         appBar: AppBar(
-          title: const Text('Admin Dashboard'),
+          title: Text(
+            'Admin Dashboard',
+            style: tstyle.titleMedium!.copyWith(color: Colors.white),
+            textScaleFactor: Get.textScaleFactor,
+          ),
           actions: [
             IconButton(
                 onPressed: () {
@@ -51,32 +55,32 @@ class AdminView extends GetView<AdminController> {
                       listTile(tstyle,
                           txt: "Name",
                           trailTxt: controller.userName!.toUpperCase()),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "Email",
                         trailTxt: controller.userEmail!,
                       ),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "Role",
                         trailTxt: controller.role!.capitalizeFirst,
                       ),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "No of Users Registered in App",
                         trailTxt: controller.userNo.toString(),
                       ),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "No of Courses Available in App",
                         trailTxt: controller.noCourses.toString(),
                       ),
-                      Divider(),
-                      SizedBox(
+                      const Divider(),
+                      const SizedBox(
                         height: 30,
                       )
                     ],

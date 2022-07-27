@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
+  @override
+  final HomeController controller = HomeController();
   HomeView({
     Key? key,
   }) : super(key: key);
@@ -17,7 +17,11 @@ class HomeView extends GetView<HomeController> {
     var tstyle = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text('WCOURSE'),
+        title: Text(
+          'WCOURSE',
+          style: tstyle.titleMedium!.copyWith(color: Colors.white),
+          textScaleFactor: Get.textScaleFactor,
+        ),
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('course').snapshots(),
@@ -122,21 +126,20 @@ class HomeView extends GetView<HomeController> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("url",
+                        Text("Url",
                             textScaleFactor: Get.textScaleFactor,
                             style: tstyle.titleMedium!),
-                        InkWell(
-                          onTap: () async {
-                            url = url;
-                            if (await canLaunch(url)) {
-                              await launch(url);
-                            } else
-                              // can't launch url, there is some error
-                              throw "Could not launch $url";
+                        ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.green)),
+                          onPressed: () {
+                            controller.openLink(url);
                           },
-                          child: Text(url,
+                          child: Text('Open link',
                               textScaleFactor: Get.textScaleFactor,
-                              style: tstyle.bodyMedium!.copyWith(color: Colors.green)),
+                              style: tstyle.bodyMedium!
+                                  .copyWith(color: Colors.white)),
                         )
                       ],
                     ),

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import '../controllers/signin_controller.dart';
 
 class SigninView extends GetView<SigninController> {
-  SigninView({Key? key}) : super(key: key);
+  const SigninView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +29,8 @@ class SigninView extends GetView<SigninController> {
                 ),
               ),
               Text(
+                style: tstyle.headlineSmall!.copyWith(color: Colors.purple),
+                textScaleFactor: Get.textScaleFactor,
                 "WCourse",
               ),
               SizedBox(
@@ -53,7 +55,9 @@ class SigninView extends GetView<SigninController> {
                         ),
                         Text(
                           'Sign In With Google',
-                          style: TextStyle(color: Colors.black),
+                          style: tstyle.bodyMedium!
+                              .copyWith(color: Colors.black),
+                          textScaleFactor: Get.textScaleFactor,
                         )
                       ]))),
             ],

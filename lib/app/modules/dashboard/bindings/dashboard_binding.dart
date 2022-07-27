@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:wcourse/app/modules/admin/controllers/admin_controller.dart';
+import 'package:wcourse/app/modules/home/controllers/home_controller.dart';
 
 import '../controllers/dashboard_controller.dart';
 
@@ -11,6 +12,9 @@ class DashboardBinding extends Bindings {
     );
     Get.lazyPut<AdminController>(
       () => AdminController(),
+    );
+     Get.lazyPut<HomeController>(
+      () => HomeController(),
     );
   }
 }

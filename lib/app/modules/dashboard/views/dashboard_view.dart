@@ -36,11 +36,11 @@ class DashboardView extends GetView<DashboardController> {
                 ),
                 controller.admin.value
                     ? const BottomNavigationBarItem(
-                        icon: Icon(CupertinoIcons.sportscourt),
+                        icon: Icon(CupertinoIcons.shield),
                         label: 'Admin',
                       )
                     : const BottomNavigationBarItem(
-                        icon: Icon(CupertinoIcons.sportscourt),
+                        icon: Icon(CupertinoIcons.profile_circled),
                         label: 'Profile',
                       ),
               ],

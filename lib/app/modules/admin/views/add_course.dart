@@ -14,9 +14,7 @@ class AddCourse extends GetView<AdminController> {
         appBar: AppBar(
           title: Text(
             'Add Course',
-            style: tstyle.titleLarge!.copyWith(
-              color: Colors.white,
-            ),
+              style: tstyle.titleMedium!.copyWith(color: Colors.white),
             textScaleFactor: Get.textScaleFactor,
           ),
           centerTitle: true,
@@ -31,7 +29,7 @@ class AddCourse extends GetView<AdminController> {
                   hintext: "Course Name",
                   data: Icons.bookmark_add_rounded,
                   controller: controller.courseController,
-                  max: 10,
+                  // max: 10,
                 ),
                 CusTextField(
                   TextInputType: TextInputType.text,

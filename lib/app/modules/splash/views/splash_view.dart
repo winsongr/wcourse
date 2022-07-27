@@ -8,6 +8,7 @@ class SplashView extends GetView<SplashController> {
   const SplashView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    var tstyle = Theme.of(context).textTheme;
     return FutureBuilder(
       builder: (context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
@@ -25,7 +26,11 @@ class SplashView extends GetView<SplashController> {
                     'assets/book.png',
                   ),
                 ),
-                Text("WCourse"),
+                Text(
+                  "WCourse",
+                  style: tstyle.headlineSmall!,
+                  textScaleFactor: Get.textScaleFactor,
+                ),
               ],
             )),
           ),

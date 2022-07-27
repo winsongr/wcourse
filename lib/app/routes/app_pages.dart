@@ -29,12 +29,12 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SPLASH,
-      page: () => SplashView(),
+      page: () => const SplashView(),
       binding: SplashBinding(),
     ),
     GetPage(
       name: _Paths.SIGNIN,
-      page: () => SigninView(),
+      page: () => const SigninView(),
       binding: SigninBinding(),
     ),
     GetPage(

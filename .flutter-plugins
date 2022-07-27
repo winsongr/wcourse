@@ -5,7 +5,6 @@ firebase_auth=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlan
 firebase_auth_web=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-4.1.1/
 firebase_core=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-1.20.0/
 firebase_core_web=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-1.7.1/
-flutter_inappwebview=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_inappwebview-5.4.3+7/
 google_sign_in=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in-5.4.0/
 google_sign_in_android=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_android-6.0.1/
 google_sign_in_ios=/home/jc/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/google_sign_in_ios-5.4.0/

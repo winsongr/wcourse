@@ -13,7 +13,11 @@ class ProfileView extends GetView<ProfileController> {
     return Obx(
       () => Scaffold(
           appBar: AppBar(
-            title: const Text('My Profile'),
+            title: Text(
+              'My Profile',
+              style: tstyle.titleMedium!.copyWith(color: Colors.white),
+              textScaleFactor: Get.textScaleFactor,
+            ),
             actions: [
               IconButton(
                   onPressed: () {
@@ -49,20 +53,20 @@ class ProfileView extends GetView<ProfileController> {
                       listTile(tstyle,
                           txt: "Name",
                           trailTxt: controller.userName!.toUpperCase()),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "Email",
                         trailTxt: controller.userEmail!,
                       ),
-                      Divider(),
+                      const Divider(),
                       listTile(
                         tstyle,
                         txt: "Role",
                         trailTxt: controller.role!.capitalizeFirst,
                       ),
-                      Divider(),
-                      SizedBox(
+                      const Divider(),
+                      const SizedBox(
                         height: 15,
                       )
                     ],

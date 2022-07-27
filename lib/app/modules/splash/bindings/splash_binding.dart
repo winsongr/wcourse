@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:wcourse/app/modules/admin/controllers/admin_controller.dart';
 import 'package:wcourse/app/modules/dashboard/controllers/dashboard_controller.dart';
-import 'package:wcourse/app/modules/home/controllers/home_controller.dart';
 import 'package:wcourse/app/modules/profile/controllers/profile_controller.dart';
 import 'package:wcourse/app/modules/signin/controllers/signin_controller.dart';
 
